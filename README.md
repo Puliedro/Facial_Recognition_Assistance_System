@@ -1,2 +1,2 @@
-# lista_visualizacion
+# Facial_Recognition_Assistance_System
 Proyecto Adrian Carmona
