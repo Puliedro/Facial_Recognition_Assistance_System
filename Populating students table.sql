@@ -1,7 +1,18 @@
-# Populating the students table 
+-- Populating the students table
 
+-- Insert a new record into the 'students' table with the specified values for each column.
 INSERT INTO students (firstname, surname_1, surname_2, email, schoolID, school_grade, school_group, degree)
 VALUES ('Hageo Juda', 'Balam', 'Mendez', '2109012@upy.edu.mx', '2109012', '4°', 'A', 'Ingeniería de Datos');
+
+-- The pattern continues with different values for each new student. Each line represents a new student being added to the database.
+-- 'firstname', 'surname_1', and 'surname_2' columns store the student's names.
+-- 'email' is the student's email address
+-- 'schoolID' is a unique identifier for the student
+-- 'school_grade' denotes the grade level of the student
+-- 'school_group' indicates a specific class or section the student belongs to.
+-- 'degree' specifies the program of study
+
+-- Additional INSERT INTO statements follow the same structure, adding more students to the 'students' table.
 
 INSERT INTO students (firstname, surname_1, surname_2, email, schoolID, school_grade, school_group, degree)
 VALUES ('Miguel Angel', 'Bastarrachea', 'Carballo', '2009009@upy.edu.mx', '2009009', '4°', 'A', 'Ingeniería de Datos');
