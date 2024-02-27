@@ -140,4 +140,4 @@ def student_dashboard():
 
 if __name__ == '__main__':
     # Run the Bottle web server with the application
-    run(app, host='localhost', port=9000, debug=True)
+    run(app, host='0.0.0.0', port=8080, debug=True)
