@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  attendance-management-system:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - MONGODB_URI=mongodb://username:password@host:port/databaseName
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
