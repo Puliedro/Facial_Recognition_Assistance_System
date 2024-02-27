@@ -1,2 +1,0 @@
-# Facial_Recognition_Assistance_System
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
