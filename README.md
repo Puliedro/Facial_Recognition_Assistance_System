@@ -69,7 +69,7 @@ Please handle your MongoDB URI with care to maintain the security of your databa
 2. Run the application:
 
    ```bash
-   python app2.py
+   python app.py
    ```
 
 3. The system should now be running on `http://localhost:9000`. Open this URL in a web browser to start using the Attendance Management System.
