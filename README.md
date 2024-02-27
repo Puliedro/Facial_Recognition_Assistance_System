@@ -72,7 +72,7 @@ Please handle your MongoDB URI with care to maintain the security of your databa
    python app.py
    ```
 
-3. The system should now be running on `http://localhost:9000`. Open this URL in a web browser to start using the Attendance Management System.
+3. The system should now be running on `http://localhost:8080`. Open this URL in a web browser to start using the Attendance Management System.
 
 ## Usage
 
