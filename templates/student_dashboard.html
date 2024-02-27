@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Student Dashboard - PIRA</title>
+</head>
+<style>
+    /* Styles */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-image: url('https://static.vecteezy.com/system/resources/previews/026/529/727/original/minimalist-black-premium-abstract-circle-background-with-luxury-dark-geometric-elements-exclusive-wallpaper-design-for-poster-brochure-presentation-website-etc-eps-vector.jpg');
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        color: white;
+    }
+    .btn {
+        --color: #00A97F;
+        --color2: rgb(10, 25, 30);
+        padding: 0.8em 1.75em;
+        background-color: var(--color);
+        border: none;
+        border-radius: 6px;
+        transition: .5s;
+        cursor: pointer;
+        font-weight: 300;
+        font-size: 17px;
+        color: white;
+        text-transform: uppercase;
+    }
+    .btn:hover {
+        background-color: var(--color2);
+    }
+</style>
+<!-- students login, insertion of student ID -->
+<body>
+    <div class="container">
+        <h1>Bienvenido!</h1>
+        <form action="/student_dashboard" method="post">
+            <input type="id" name="student_id" placeholder="Tu matricula"" required>
+            <input type="text" name="codeInput" placeholder="Ingresa el código" maxlength="4" required>
+            <button type="submit" class="btn">Enviar Código</button>
+        </form>
+        <div id="responseMessage"></div>
+    </div>
+</body>
+</html>

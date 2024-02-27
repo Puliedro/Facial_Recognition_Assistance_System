@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PIRA Acceso de Estudiantes</title>
+        <style>
+          
+          body {
+            margin: 0;
+            font-family:  Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/026/529/727/original/minimalist-black-premium-abstract-circle-background-with-luxury-dark-geometric-elements-exclusive-wallpaper-design-for-poster-brochure-presentation-website-etc-eps-vector.jpg'); /* Asegúrate de reemplazar esto con la ruta de tu imagen de fondo */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+          }
+          .container {
+            text-align: center;
+            padding: 20px;
+          }
+          .title {
+            color: white;
+            margin-bottom: 20px;
+          }
+        
+          /* Styles for the buttons */
+          .btn {
+            --color: #00A97F;
+            --color2: rgb(10, 25, 30);
+            padding: 0.8em 1.75em;
+            background-color: transparent;
+            border-radius: 6px;
+            border: .3px solid var(--color);
+            transition: .5s;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            z-index: 1;
+            font-weight: 300;
+            font-size: 17px;
+            font-family: 'Roboto', 'Segoe UI', sans-serif;
+            text-transform: uppercase;
+            color: var(--color);
+          }
+        
+          .btn::after, .btn::before {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            transform: skew(90deg) translate(-50%, -50%);
+            position: absolute;
+            inset: 50%;
+            left: 25%;
+            z-index: -1;
+            transition: .5s ease-out;
+            background-color: var(--color);
+          }
+        
+          .btn::before {
+            top: -50%;
+            left: -25%;
+            transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+          }
+        
+          .btn:hover::before {
+            transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+          }
+        
+          .btn:hover::after {
+            transform: skew(45deg) translate(-50%, -50%);
+          }
+        
+          .btn:hover {
+            color: var(--color2);
+          }
+        
+          .btn:active {
+            filter: brightness(.7);
+            transform: scale(.98);
+          }
+          /* Fin de los estilos de botones */
+        
+          .icon {
+            width: 100px; /* Size of the icones */
+          }
+          .section {
+            margin-bottom: 30px;
+          }
+          .section-title {
+            color: white;
+            margin-bottom: 15px;
+          }
+        </style>
+        </head>
+<body>
+
+<div class="container">
+  <h1 class="title">Acceso Estudiantes</h1>
+  <form action="/student_login" method="post">
+    <input type="email" id="student_email" name="student_email" placeholder="2109148@upy.edu.mx" pattern="[0-9]+@upy.edu.mx" required>
+    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+    <button type="submit" class="btn">Iniciar Sesión</button>
+  </form>
+</div>
+
+</body>
+</html>
