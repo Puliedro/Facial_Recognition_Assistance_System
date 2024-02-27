@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PICE - Plataforma Institucional de Control Escolar</title>
+<style>
+  body {
+    margin: 0;
+    font-family:  Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url('https://static.vecteezy.com/system/resources/previews/026/529/727/original/minimalist-black-premium-abstract-circle-background-with-luxury-dark-geometric-elements-exclusive-wallpaper-design-for-poster-brochure-presentation-website-etc-eps-vector.jpg'); /* Asegúrate de reemplazar esto con la ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  .title {
+    color: white;
+    margin-bottom: 20px;
+  }
+
+  /* Styles for the buttons */
+  .btn {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 17px;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+  }
+
+  .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+  }
+
+  .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+  }
+
+  .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+  }
+
+  .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+  }
+
+  .btn:hover {
+    color: var(--color2);
+  }
+
+  .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+  }
+  /* End - Styles for the buttons */
+
+  .icon {
+    width: 100px; /* Tamaño de los iconos */
+  }
+  .section {
+    margin-bottom: 30px;
+  }
+  .section-title {
+    color: white;
+    margin-bottom: 15px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 style="font-size: 400%;", class="title">PIRA</h1>
+    <h2 class="title">Plataforma Institucional de Registro de Asistencia</h2>
+    
+    <div class="section">
+      <img src="https://static.wixstatic.com/media/e16f80_1dec8914de7c4091a46b432b2c3b8752~mv2.png/v1/fill/w_131,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e16f80_1dec8914de7c4091a46b432b2c3b8752~mv2.png" alt="Icono Docentes" class="icon">
+      <h3 class="section-title">Docentes</h3>
+      <!-- Update or replace the existing button with the following line -->
+      <button class="btn" onclick="window.location.href='/teacher';">Acceder</button>
+    </div>
+    
+    <div class="section">
+      <img src="https://static.wixstatic.com/media/e16f80_62ac4ec83cc74ddeaea361037b623539~mv2.png/v1/fill/w_131,h_78,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e16f80_62ac4ec83cc74ddeaea361037b623539~mv2.png" alt="Icono Estudiantes" class="icon">
+      <h3 class="section-title">Estudiantes</h3>
+      <!-- Update or replace the existing button with the following line -->
+      <button class="btn" onclick="window.location.href='/student';">Acceder</button>
+    </div>
+    
+  </div>
+  
+  </body>
+  </html>

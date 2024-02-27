@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIRA Acceso a Maestros</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/026/529/727/original/minimalist-black-premium-abstract-circle-background-with-luxury-dark-geometric-elements-exclusive-wallpaper-design-for-poster-brochure-presentation-website-etc-eps-vector.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            color: white;
+        }
+        .btn {
+            --color: #00A97F;
+            --color2: rgb(10, 25, 30);
+            padding: 0.8em 1.75em;
+            background-color: var(--color);
+            border: none;
+            border-radius: 6px;
+            transition: .5s;
+            cursor: pointer;
+            font-weight: 300;
+            font-size: 17px;
+            color: white;
+            text-transform: uppercase;
+        }
+        .btn:hover {
+            background-color: var(--color2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido!</h1>
+        <p>Latest code: <span id="latest-code">{{latest_code}}</span></p>
+        <button class="btn" onclick="generateCode()">Generate Code</button>
+    </div>
+    <script>
+        function generateCode() {
+            // Function to manually refresh the code
+            fetch('/teacher_dashboard')
+                .then(response => response.text())
+                .then(html => {
+                    // This is a simple way to refresh the entire page:
+                    document.open();
+                    document.write(html);
+                    document.close();
+                });
+        }
+
+        setInterval(function() {
+            // This function will be called every 30 seconds to update the latest code
+            fetch('/latest_code')
+                .then(response => response.json())
+                .then(code => {
+                    document.getElementById('latest-code').textContent = code;
+                });
+        }, 30000);  // 30000 milliseconds = 30 seconds
+    </script>
+</body>
+</html>
